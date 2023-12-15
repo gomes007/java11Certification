@@ -1,0 +1,28 @@
+Annotations in Java can have different retention policies, which determine at what point the annotation is discarded. The retention policy can be one of three types:
+
+SOURCE: Annotations are discarded by the compiler during compilation.
+CLASS: Annotations are recorded in the class file by the compiler but not retained at runtime.
+RUNTIME: Annotations are recorded in the class file by the compiler and retained at runtime by the JVM.
+Let's look at the given annotations:
+
+A. @Deprecated
+This annotation is retained at runtime (RUNTIME retention).
+It's used to mark elements that should not be used and is available to the JVM and other tools at runtime.
+
+B. @Override
+This annotation has a SOURCE retention policy.
+It is used to indicate that a method overrides a method declared in a superclass, and it is discarded by the compiler after it checks that the method does indeed override another method.
+
+C. @SuppressWarnings
+Like @Override, this annotation also has a SOURCE retention policy.
+It's used to suppress compiler warnings about certain kinds of programming issues, and it is not needed after compile time.
+
+D. @SafeVarargs
+This annotation has a RUNTIME retention policy.
+It's used to suppress warnings about potential unsafe operations involving varargs (variable-length arguments),
+and it can be accessed at runtime.
+
+E. @FunctionalInterface
+This annotation also has a SOURCE retention policy.
+It is used to indicate that an interface is intended to be a functional interface,
+but this information is not needed at runtime.

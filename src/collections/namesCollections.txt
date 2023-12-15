@@ -1,0 +1,80 @@
+ArrayList:
+Purpose: Implements a resizable array.
+Characteristics: Offers fast random access, efficient storage for ordered data, and is dynamic in size.
+    add(E e): Adds an element to the end of the list.
+    get(int index): Retrieves the element at the specified index.
+    remove(int index): Removes the element at the specified index.
+    size(): Returns the number of elements in the list.
+
+LinkedList:
+Purpose: Implements a doubly-linked list.
+Characteristics: Good for frequent insertion and deletion operations, but slower random access compared to ArrayList.
+    addFirst(E e) and addLast(E e): Inserts the specified element at the beginning/end of the list.
+    getFirst() and getLast(): Returns the first/last element.
+    removeFirst() and removeLast(): Removes and returns the first/last element.
+
+HashSet:
+Purpose: Implements a set backed by a hash table.
+Characteristics: Ensures no duplicate elements, provides efficient searching, adding, and removing operations.
+    add(E e): Adds the specified element if it is not already present.
+    contains(Object o): Returns true if the set contains the specified element.
+    remove(Object o): Removes the specified element from the set if it is present.
+
+LinkedHashSet:
+Purpose: A HashSet with a predictable iteration order.
+Characteristics: Combines hash table and linked list, maintains insertion order, and still prevents duplicates.
+    Inherits methods from HashSet, with the additional benefit of maintaining insertion order.
+
+TreeSet:
+Purpose: Implements a set backed by a tree.
+Characteristics: Maintains sorted order, offers log(n) time cost for basic operations.
+    add(E e): Adds the specified element to the set.
+    first(): Returns the first (lowest) element.
+    last(): Returns the last (highest) element.
+    subSet(E fromElement, E toElement): Returns a view of the portion of the set whose elements range
+    from fromElement, inclusive, to toElement, exclusive.
+
+HashMap:
+Purpose: Implements a hash table for storing key-value pairs.
+Characteristics: Offers constant-time performance for basic operations, allows one null key, and multiple null values.
+    put(K key, V value): Associates the specified value with the specified key.
+    get(Object key): Returns the value to which the specified key is mapped.
+    remove(Object key): Removes the mapping for the specified key if present.
+    keySet(): Returns a set view of the keys contained in the map.
+
+LinkedHashMap:
+Purpose: A HashMap with a predictable iteration order.
+Characteristics: Maintains insertion order or access order of elements, slightly slower than HashMap.
+    Inherits methods from HashMap, with the additional benefit of maintaining insertion or access order.
+
+
+TreeMap:
+Purpose: A map implemented based on a red-black tree.
+Characteristics: Sorts the keys in natural order or using a Comparator, offers log(n) time for containsKey, get, put, and remove operations.
+    put(K key, V value): Associates the specified value with the specified key.
+    get(Object key): Returns the value to which the specified key is mapped.
+    firstKey(): Returns the first (lowest) key.
+    lastKey(): Returns the last (highest) key.
+
+Stack:
+Purpose: Implements a last-in-first-out (LIFO) stack.
+Characteristics: Allows pushing and popping of elements, extends Vector.
+    push(E e): Pushes an element onto the stack represented by this list.
+    pop(): Removes the element at the top of the stack and returns that element.
+    peek(): Looks at the element at the top of the stack without removing it.
+
+Queue and PriorityQueue:
+Purpose: Implements a first-in-first-out (FIFO) queue.
+Characteristics: Queue is an interface, whereas PriorityQueue is a class that orders elements based on their natural ordering or a comparator.
+    offer(E e): Inserts the specified element into the queue.
+    poll(): Retrieves and removes the head of the queue, or returns null if the queue is empty.
+    peek(): Retrieves, but does not remove, the head of the queue.
+
+Deque and ArrayDeque:
+Purpose: Extends Queue to handle a double-ended queue.
+Characteristics: Supports insertion and removal at both ends, ArrayDeque is a resizable array implementation of the Deque interface.
+    addFirst(E e) and addLast(E e): Inserts the specified element at the front/end of the deque.
+    removeFirst() and removeLast(): Removes and returns the first/last element of the deque.
+    peekFirst() and peekLast(): Retrieves, but does not remove, the first/last element of the deque.
+
+
